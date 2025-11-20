@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="stylesheets/styles.css">
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
   <meta name="viewport" content="width=device-width">
+  <style>
+    #view-more-btn a:hover {
+      color: #069;
+    }
+    #fluxbox, #additional-project {
+      list-style-type: disc;
+    }
+  </style>
 </head>
 
 <body>
@@ -57,26 +65,36 @@
       <h1>Projects</h1>
       <ul>
         <li>
-          <b>Automated SaaS Infrastructure</b> 
-          [<a href="https://github.com/aryanrangapur/Multi-Tenant-PrestaShop-SaaS-Server" target="_blank">View</a>]<br>
+          <b>Automated SaaS Infrastructure</b> &nbsp;
+          [<a href="https://github.com/aryanrangapur/Multi-Tenant-PrestaShop-SaaS-Server" target="_blank">&nbsp;view&nbsp;</a>]<br>
           Built a cloud-native backend for scalable online stores, 
           automating deployment, tenant provisioning, and lifecycle management.
         </li>
         <li>
-          <b>Expenso – Personal Expense Tracker</b> 
-          [<a href="https://github.com/aryanrangapur/Expenso" target="_blank">View</a>]<br>
+          <b>Expenso – Personal Expense Tracker</b> &nbsp;
+          [<a href="https://github.com/aryanrangapur/Expenso" target="_blank">&nbsp;view&nbsp;</a>]<br>
           Developed a web app with secure APIs, bulk operations, and real-time reports, 
           helping users track expenses easily and manage spending effectively.
         </li>
         <li>
-          <b>Battle of LLMs</b> 
-          [<a href="https://arxiv.org/abs/2405.18344" target="_blank">Paper</a>]<br>
+          <b>Battle of LLMs</b> &nbsp;
+          [<a href="https://arxiv.org/abs/2405.18344" target="_blank">&nbsp;paper&nbsp;</a>]<br>
           Benchmarked major language models on conversational datasets,
           exposing reasoning gaps and comparing performance across key evaluation metrics.
         </li>
-        <li>
-          <b>NutriFood – Food Image Classification</b> 
-          [<a href="https://github.com/aryanrangapur/NutriFood" target="_blank">View</a>]<br>
+        <li id="view-more-btn" style="list-style: none; text-align: left; margin-top: 10px;">
+          <a href="#" onclick="toggleProjects()" style="color: rgb(42, 42, 42); text-decoration: none; font-size: 0.9em; cursor: pointer;">View More</a>
+        </li>
+        
+        <li id="fluxbox" style="display: none;">
+          <b>Flux Box – Cloud File Storage</b> &nbsp;
+          [<a href="https://github.com/aryanrangapur/fluxbox" target="_blank">&nbsp;view&nbsp;</a>]<br>
+          Built a secure cloud-based file storage system that lets users upload, organize, and manage files in private,
+          isolated namespaces. Supports folder creation, direct S3 uploads, and fast access through a clean, minimal interface.
+        </li>
+        <li id="additional-project" style="display: none;">
+          <b>NutriFood – Food Image Classification</b> &nbsp;
+          [<a href="https://github.com/aryanrangapur/NutriFood" target="_blank">&nbsp;view&nbsp;</a>]<br>
           Created a CNN-powered food recognition system deployed as a web app, 
           generating instant nutritional insights from user-uploaded images.
         </li>
@@ -115,5 +133,13 @@
       <!-- Optional footer here -->
     </footer>
   </div>
+
+  <script>
+    function toggleProjects() {
+      document.getElementById('fluxbox').style.display = 'list-item';
+      document.getElementById('additional-project').style.display = 'list-item';
+      document.getElementById('view-more-btn').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
